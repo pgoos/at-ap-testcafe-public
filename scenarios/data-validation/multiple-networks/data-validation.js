@@ -35,7 +35,6 @@ const uniqueClientIdsInExcludedNetworks = [...new Set(clientIdsInExcludedNetwork
 const uniqueClientIdsInSupportedNetworks = uniqueClientIdsInMultipleNetworks.filter(clientId => !uniqueClientIdsInExcludedNetworks.includes(clientId));
 const limitedUniqueClientIds = limitClientsDataSet(uniqueClientIdsInSupportedNetworks, 'multiple');
 const shuffledUniqueClientIds = shuffle(limitedUniqueClientIds);
-// console.log(shuffledDataSet);
 
 fixture("Data validation - Clients in multiple networks (SAS/CJ/PJ/Rakuten)")
     .before(async (t) => {
@@ -127,7 +126,6 @@ shuffledUniqueClientIds.forEach((clientId) => {
             externalData: totalFormattedExternalData,
             dateRange: appliedDateRange
         })
-        // })
         
     })
     .before(async (t) => {

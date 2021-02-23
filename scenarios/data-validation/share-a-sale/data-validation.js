@@ -41,10 +41,8 @@ const dashboardPage = new MainDashboardPage();
 const clientsData = loadClientDataJsonFile();
 const clientsInSingleNetworkOnly = clientsData.filter( c => clientsData.filter(c2 => c2.id === c.id).length === 1);
 const clientsSas = filterClientsDataSetByNetworkName(clientsInSingleNetworkOnly, AffiliateNetworks.SAS);
-// const clientsSas = filterClientsDataSetByNetworkName(clientsInSingleNetworkOnly, AffiliateNetworks.SAS).filter(client => client.id === "598");
 const limitedDataSet = limitClientsDataSet(clientsSas, AffiliateNetworks.SAS);
 const shuffledDataSet = shuffle(limitedDataSet);
-// console.log(shuffledDataSet);
 
 fixture("Data validation - SAS")
     // .page(getClientPortals().SAS)

@@ -3,7 +3,6 @@ import { t, ClientFunction, Selector } from "testcafe";
 import { waits } from '../.testcaferc';
 import PjResults from "../data/models/external/pj/results";
 import { ExecutionMode } from "../data/consts/execution";
-// import { executionMode } from "./envs";
 const csv = require('csvtojson')
 const fs = require('fs')
 const uuidv4 = require('uuid/v4');

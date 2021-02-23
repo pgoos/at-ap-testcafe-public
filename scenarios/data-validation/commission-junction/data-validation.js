@@ -20,7 +20,6 @@ const dotenv = require('dotenv');
 const clientsData = loadClientDataJsonFile();
 const clientsInSingleNetworkOnly = clientsData.filter( c => clientsData.filter(c2 => c2.id === c.id).length === 1);
 const clientsCj = filterClientsDataSetByNetworkName(clientsInSingleNetworkOnly, AffiliateNetworks.CJ);
-//const clientsCj = filterClientsDataSetByNetworkName(clientsInSingleNetworkOnly, AffiliateNetworks.CJ).filter(client => client.id === "32");
 dotenv.config();
 const limitedDataSet = limitClientsDataSet(clientsCj, AffiliateNetworks.CJ);
 const shuffledDataSet = shuffle(limitedDataSet);

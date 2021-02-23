@@ -25,7 +25,6 @@ console.log(clients);
 const clientsData = loadClientDataJsonFile();
 const clientsInSingleNetworkOnly = clientsData.filter( c => clientsData.filter(c2 => c2.id === c.id).length === 1);
 const clientsPepperJam = filterClientsDataSetByNetworkName(clientsInSingleNetworkOnly, AffiliateNetworks.PEPPER_JAM);
-// const clientsPepperJam = filterClientsDataSetByNetworkName(clientsInSingleNetworkOnly, AffiliateNetworks.PEPPER_JAM).filter(client => client.id === "341" || client.id === "342");
 const limitedDataSet = limitClientsDataSet(clientsPepperJam, AffiliateNetworks.PEPPER_JAM);
 const shuffledDataSet = shuffle(limitedDataSet);
 

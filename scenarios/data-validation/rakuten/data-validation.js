@@ -20,7 +20,6 @@ const dotenv = require('dotenv');
 const clientsData = loadClientDataJsonFile();
 const clientsInSingleNetworkOnly = clientsData.filter( c => clientsData.filter(c2 => c2.id === c.id).length === 1);
 const clientsRakuten = filterClientsDataSetByNetworkName(clientsInSingleNetworkOnly, AffiliateNetworks.RAKUTEN);
-// const clientsRakuten = filterClientsDataSetByNetworkName(clientsInSingleNetworkOnly, AffiliateNetworks.RAKUTEN).filter(client => client.id === "293");
 const limitedDataSet = limitClientsDataSet(clientsRakuten, AffiliateNetworks.RAKUTEN);
 const shuffledDataSet = shuffle(limitedDataSet);
 
@@ -29,8 +28,6 @@ fixture("Data validation - Rakuten")
         await dotenv.config();
         console.log(`Started run at ${new Date()}`);
     })
-    // .after(async (t) => {
-    // })
     .meta('network', 'rakuten');
 
 shuffledDataSet.forEach((client) => {

@@ -42,8 +42,6 @@ test("Get information about clients", async (t) => {
     let clientIds = clientEntriesInMultipleNetworks.map((client) => client.id);
     const uniqueClientIdsInMultipleNetworks = [...new Set(clientIds)];
     console.log("Unique clients in multiple networks=", uniqueClientIdsInMultipleNetworks.length);
-    // const clientsInMultipleNetworks = clientsData.filter( c => clientsData.filter(c2 => c2.id === c.id).length > 1);
-    // console.log('Clients in multiple network=', clientsInMultipleNetworks.length);
     const clientsSas = filterClientsDataSetByNetworkName(clientsInSingleNetworkOnly, AffiliateNetworks.SAS);
     console.log('SAS=', clientsSas.length);
     const clientsCj = filterClientsDataSetByNetworkName(clientsInSingleNetworkOnly, AffiliateNetworks.CJ);
@@ -64,7 +62,6 @@ test("Get information about clients", async (t) => {
     console.log('PepperJam=', clientsPepperJam.length);
     const clientsCommissionFactory = filterClientsDataSetByNetworkName(clientsInSingleNetworkOnly, AffiliateNetworks.COMMISSION_FACTORY);
     console.log('CommissionFactory=', clientsCommissionFactory.length);
-    // const clientIds = clientsData.map((client) => client.id);
     clientIds = clientsData.map((client) => client.id);
     const uniqueClientIds = [...new Set(clientIds)];
     console.log("Unique clients=", uniqueClientIds.length);
@@ -80,7 +77,5 @@ test("Get information about clients", async (t) => {
 
 test('Regenerate JSON credentials file from CSV', async (t) => {
     await generateJsonCredentialsFromCsv();
-    // const clientsData = await generateJsonCredentialsFromCsv();
-    // console.log(clientsData);
 })
 .meta('misc', 'create-json-creds');

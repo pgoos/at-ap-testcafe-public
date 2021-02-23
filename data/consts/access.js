@@ -2,12 +2,12 @@ import { executionEnv } from "../../utils/envs";
 
 const defaultUrls = {
     start: {
-        dev: 'http://23.22.120.132',
-        staging: 'http://3.226.60.41'
+        dev: '<dev>',
+        staging: '<staging>'
     },
     api: {
-        dev: 'http://ec2-3-91-239-16.compute-1.amazonaws.com:3000/',
-        staging: 'http://ec2-18-206-35-253.compute-1.amazonaws.com:3000/'
+        dev: '<dev api>',
+        staging: '<staging api>'
     }
 };
 

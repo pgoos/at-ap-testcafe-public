@@ -1,0 +1,16 @@
+{
+    "clientDataFile": "./data/current-creds-20200102.csv",
+    "clientDataJsonFile": "./data/clients.json",
+    "clientPortals": {
+        "SAS": "https://account.shareasale.com/m-login.cfm",
+        "Impact": "https://app.impact.com/login.user",
+        "CJ": "https://www.cj.com/login",
+        "AvantLink": "https://arches.avantlink.com/login",
+        "HasOffers": "https://advertisepurple.hasoffers.com/",
+        "PepperJam": "https://ascend.pepperjam.com/authentication/logout",
+        "Rakuten": "https://login.linkshare.com/sso/login?service=http://cli.linksynergy.com/cli/publisher/home.php",
+        "Awin": "https://ui.awin.com/idp/en/login",
+        "LinkConnector": "https://www.linkconnector.com/account-login/"
+    },
+    "sampleSize": 20
+}

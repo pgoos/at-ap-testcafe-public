@@ -1,0 +1,32 @@
+{
+  "filter": {
+    "testMeta": {
+        "cj": true,
+        "yesterday": true
+    }
+  },
+  "screenshots": {
+    "takeOnFails": true
+  },
+  "skipJsErrors": true,
+  "src": "scenarios",
+  "selectorTimeout": "15000",
+  "assertionTimeout": "10000",
+  "pageLoadTimeout": "30000",
+  "waits": {
+    "table": {
+      "maxAttempts": 10,
+      "timeout": 500
+    },
+    "modal": {
+      "maxAttempts": 4,
+      "timeout": 500
+    },
+    "report": {
+      "maxAttempts": 180,
+      "timeout": 1000
+    },
+    "fileDownloadTimeout": 45000,
+    "maxLoginAttempts": 3
+  }
+}

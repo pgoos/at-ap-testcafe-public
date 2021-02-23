@@ -1,0 +1,1 @@
+export const TIMEOUT_COOKIE_MODAL_SEC = 2;
